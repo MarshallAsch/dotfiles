@@ -1,0 +1,22 @@
+[user]
+	email = maasch@rogers.com
+	name = Marshall Asch
+	signingkey = E3BC34C2C432FBFB48CA3E3C30E6E3B7481A57CF
+[core]
+	excludesfile = /Users/marshall/.gitignore_global
+	editor = nano
+	autocrlf = input
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/marshall/.stCommitMsg
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
