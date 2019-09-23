@@ -48,3 +48,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
+export PATH="/usr/local/opt/qt/bin:$PATH"

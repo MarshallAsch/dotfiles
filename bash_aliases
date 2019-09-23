@@ -28,6 +28,7 @@ alias ll="$lsColor -aFlh"
 alias cd..="cd .."
 
 alias git_log="git log --all --graph --decorate"
+alias git_log_short="git log --graph --oneline --decorate --all"
 alias mkdir="mkdir -p"
 
 alias openPorts="sudo lsof -i | grep LISTEN"

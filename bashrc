@@ -61,3 +61,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+HISTTIMEFORMAT="%d/%m/%y %T "
