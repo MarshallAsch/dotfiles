@@ -49,3 +49,11 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 export PATH="/usr/local/opt/qt/bin:$PATH"
+
+
+unset YELLOW
+unset GREEN
+unset MAGENTA
+unset CYAN
+unset CLEAR
+unset BOLD
