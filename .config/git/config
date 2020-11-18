@@ -1,0 +1,6 @@
+[user]
+	name = Marshall Asch
+	email = maasch@rogers.com
+[core]
+	editor = vim
+	autocrlf = input
