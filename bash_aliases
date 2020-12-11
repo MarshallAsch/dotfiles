@@ -34,3 +34,31 @@ alias mkdir="mkdir -p"
 alias openPorts="sudo lsof -i | grep LISTEN"
 alias ssh_agent='eval "$(ssh-agent -s)"'
 
+
+#alias minecraft="open ~/Downloads/Feed\ The\ Beast.app/Contents/Java/FTB_Launcher.jar"
+alias minecraft="open /Applications/FTBApp.app/Contents/MacOS/JavaApplicationStub"
+
+function cDev() {
+
+    PASSED=$1
+
+    echo ""
+
+    if [[ !  -d $PASSED ]]; then
+        echo "$PASSED  must be a dir"
+        return 1
+    fi
+
+    docker pull marshallasch/cdev
+
+    if [[ $? -ne 0 ]]; then
+        echo "Docker not running.... starting...."
+        open /Applications/Docker.app
+        sleep 5
+        docker pull marshallasch/cdev
+    fi
+
+    echo "starting c dev environment"
+
+    docker run -v "$PASSED:/root/code" -it marshallasch/cdev /bin/bash
+}
