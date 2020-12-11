@@ -23,7 +23,7 @@ set $mon_2 DP-2
 
 ####### SET UP DISPLAYS
 # uses xrandr to set araingment
-exec --no-startup-id xrandr --output DP-2 --rate 100.00 --mode 3440x1440 --primary --pos 1920x0 --output HDMI-1 --pos 0x360 --mode 1920x1080 --rate 60.00
+exec --no-startup-id xrandr --output DP-2 --rate 120.00 --mode 3440x1440 --primary --pos 1920x0 --output HDMI-1 --pos 0x360 --mode 1920x1080 --rate 60.00
 
 #  automaticly lock the screen after inactivity
 
@@ -249,10 +249,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 1 px or 1 ppt
+        bindsym j resize grow height 1 px or 1 ppt
+        bindsym k resize shrink height 1 px or 1 ppt
+        bindsym l resize grow width 1 px or 1 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt

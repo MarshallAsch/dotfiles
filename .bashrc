@@ -22,8 +22,8 @@ export PATH
 
 # User specific aliases and functions
 export SPICETIFY_INSTALL="/opt/spicetify-cli"
-export PATH="$PATH:$SPICETIFY_INSTALL"
-
+export PATH="$PATH:$SPICETIFY_INSTALL:"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 export EDITOR=vim
 
