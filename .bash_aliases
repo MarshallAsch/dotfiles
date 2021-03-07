@@ -13,7 +13,7 @@ alias ll="ls -l --color -h"
 
 alias gh="history | grep "
 
-alias xclip="xclip -set clip"
+alias xclip="xclip -sel clip"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/.dotfiles/ --work-tree=$HOME'
 

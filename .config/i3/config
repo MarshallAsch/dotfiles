@@ -30,7 +30,7 @@ exec --no-startup-id xrandr --output DP-2 --rate 120.00 --mode 3440x1440 --prima
 set $lock_time_min 5
 set $screen_off_time_s 360
 
-exec --no-startup-id xautolock -time $lock_time_min -locker "/usr/local/bin/i3exit lock" -secure
+exec --no-startup-id xautolock -time $lock_time_min -locker "/usr/local/bin/i3exit lock"
 exec --no-startup-id xset dpms $screen_off_time_s 0 0
 
 exec --no-startup-id echo "$HOME" > /tmp/whereami
@@ -107,17 +107,31 @@ exec --no-startup-id pulseaudio --start
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+bindsym Pause exec --no-startup-id playerctl play-pause
+bindsym $mod+Home exec --no-startup-id playerctl previous
+bindsym $mod+End exec --no-startup-id playerctl next
+
+bindsym $mod+Prior exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym $mod+Next exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+
+# Smaller volume increment
+bindsym $mod+Shift+Prior exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym $mod+Shift+Next exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+
+bindsym $mod+Mod1+Left exec i3-msg workspace prev 
+bindsym $mod+Mod1+Right exec i3-msg workspace next 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty --working-directory "$(cat /tmp/whereami)"
-
+bindsym $mod+Shift+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -302,6 +316,8 @@ mode $lock_mode {
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    status_command i3status
 	position top
+    bindsym button4 nop
+    bindsym button5 nop
 }

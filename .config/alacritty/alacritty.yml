@@ -163,136 +163,165 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night)
+# Monakai.dark from terminal.sexy
 colors:
   # Default colors
   primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
-    background: '0x2D2A2E'
-    foreground: '0xEFEFEF'
-
-
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '#828482'
-    #bright_foreground: '#eaeaea'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor.
-  #
-  # Allowed values are CellForeground and CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  #cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
-
-  # Vi mode cursor colors
-  #
-  # Colors for the cursor when the vi mode is active.
-  #
-  # Allowed values are CellForeground and CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  #vi_mode_cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
-
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area.
-  #
-  # Allowed values are CellForeground and CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  #selection:
-  #  text: CellBackground
-  #  background: CellForeground
-
-  # Search colors
-  #
-  # Colors used for the search bar and match highlighting.
-  #search:
-    # Allowed values are CellForeground and CellBackground, which reference the
-    # affected cell, or hexadecimal colors like #ff00ff.
-    #matches:
-    #  foreground: '#000000'
-    #  background: '#ffffff'
-
-    #bar:
-    #  background: '#c5c8c6'
-    #  foreground: '#1d1f21'
+    background: '0x272822'
+    foreground: '0xf8f8f2'
 
   # Normal colors
   normal:
-  #  black:   '#1d1f21'
-  #  red:     '#cc6666'
-  #  green:   '#b5bd68'
-  #  yellow:  '#f0c674'
-  #  blue:    '#81a2be'
-  #  magenta: '#b294bb'
-  #  cyan:    '#8abeb7'
-  #  white:   '#c5c8c6'
-
-    black:   '0x403E41'
-    red:     '0xFF6188'
-    green:   '0xA9DC76'
-    yellow:  '0xFF6188'
-    blue:    '0xFC9867'
-    magenta: '0xAB9DF2'
-    cyan:    '0x78DCE8'
-    white:   '0xEFEFEF'
-
-
+    black:   '0x272822'
+    red:     '0xf92672'
+    green:   '0xa6e22e'
+    yellow:  '0xf4bf75'
+    blue:    '0x66d9ef'
+    magenta: '0xae81ff'
+    cyan:    '0xa1efe4'
+    white:   '0xf8f8f2'
 
   # Bright colors
   bright:
-  #  black:   '#666666'
-  #  red:     '#d54e53'
-  #  green:   '#b9ca4a'
-  #  yellow:  '#e7c547'
-  #  blue:    '#7aa6da'
-  #  magenta: '#c397d8'
-  #  cyan:    '#70c0b1'
-  #  white:   '#eaeaea'
-    
+    black:   '0x75715e'
+    red:     '0xf92672'
+    green:   '0xa6e22e'
+    yellow:  '0xf4bf75'
+    blue:    '0x66d9ef'
+    magenta: '0xae81ff'
+    cyan:    '0xa1efe4'
+    white:   '0xf9f8f5'
 
-    black:   '0x727072'
-    red:     '0xFF6188'
-    green:   '0xA9DC76'
-    yellow:  '0xFFD866'
-    blue:    '0xFC9867'
-    magenta: '0xAB9DF2'
-    cyan:    '0x78DCE8'
-    white:   '0xEFEFEF'
-
-
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  #dim:
-  #  black:   '#131415'
-  #  red:     '#864343'
-  #  green:   '#777c44'
-  #  yellow:  '#9e824c'
-  #  blue:    '#556a7d'
-  #  magenta: '#75617b'
-  #  cyan:    '#5b7d78'
-  #  white:   '#828482'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '#ff00ff' }`
-  #
-  #indexed_colors: []
+# Colors (Tomorrow Night)
+#colors:
+#  # Default colors
+#   primary:
+#  #  background: '#1d1f21'
+#  #  foreground: '#c5c8c6'
+#    background: '0x2D2A2E'
+#    foreground: '0xEFEFEF'
+#
+#
+#    # Bright and dim foreground colors
+#    #
+#    # The dimmed foreground color is calculated automatically if it is not present.
+#    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+#    # is `false`, the normal foreground color will be used.
+#    #dim_foreground: '#828482'
+#    #bright_foreground: '#eaeaea'
+#
+#  # Cursor colors
+#  #
+#  # Colors which should be used to draw the terminal cursor.
+#  #
+#  # Allowed values are CellForeground and CellBackground, which reference the
+#  # affected cell, or hexadecimal colors like #ff00ff.
+#  #cursor:
+#  #  text: CellBackground
+#  #  cursor: CellForeground
+#
+#  # Vi mode cursor colors
+#  #
+#  # Colors for the cursor when the vi mode is active.
+#  #
+#  # Allowed values are CellForeground and CellBackground, which reference the
+#  # affected cell, or hexadecimal colors like #ff00ff.
+#  #vi_mode_cursor:
+#  #  text: CellBackground
+#  #  cursor: CellForeground
+#
+#  # Selection colors
+#  #
+#  # Colors which should be used to draw the selection area.
+#  #
+#  # Allowed values are CellForeground and CellBackground, which reference the
+#  # affected cell, or hexadecimal colors like #ff00ff.
+#  #selection:
+#  #  text: CellBackground
+#  #  background: CellForeground
+#
+#  # Search colors
+#  #
+#  # Colors used for the search bar and match highlighting.
+#  #search:
+#    # Allowed values are CellForeground and CellBackground, which reference the
+#    # affected cell, or hexadecimal colors like #ff00ff.
+#    #matches:
+#    #  foreground: '#000000'
+#    #  background: '#ffffff'
+#
+#    #bar:
+#    #  background: '#c5c8c6'
+#    #  foreground: '#1d1f21'
+#
+#  # Normal colors
+#  #normal:
+#  #  black:   '#1d1f21'
+#  #  red:     '#cc6666'
+#  #  green:   '#b5bd68'
+#  #  yellow:  '#f0c674'
+#  #  blue:    '#81a2be'
+#  #  magenta: '#b294bb'
+#  #  cyan:    '#8abeb7'
+#  #  white:   '#c5c8c6'
+#
+#    black:   '0x403E41'
+#    red:     '0xFF6188'
+#    green:   '0xA9DC76'
+#    yellow:  '0xFFd866'
+#    blue:    '0xFC9867'
+#    magenta: '0xAB9DF2'
+#    cyan:    '0x78DCE8'
+#    white:   '0xEFEFEF'
+#
+#
+#
+#  # Bright colors
+#  bright:
+#  #  black:   '#666666'
+#  #  red:     '#d54e53'
+#  #  green:   '#b9ca4a'
+#  #  yellow:  '#e7c547'
+#  #  blue:    '#7aa6da'
+#  #  magenta: '#c397d8'
+#  #  cyan:    '#70c0b1'
+#  #  white:   '#eaeaea'
+#    
+#
+#    black:   '0x727072'
+#    red:     '0xFF6188'
+#    green:   '0xA9DC76'
+#    yellow:  '0xFFD866'
+#    blue:    '0xFC9867'
+#    magenta: '0xAB9DF2'
+#    cyan:    '0x78DCE8'
+#    white:   '0xEFEFEF'
+#
+#
+#
+#  # Dim colors
+#  #
+#  # If the dim colors are not set, they will be calculated automatically based
+#  # on the `normal` colors.
+#  #dim:
+#  #  black:   '#131415'
+#  #  red:     '#864343'
+#  #  green:   '#777c44'
+#  #  yellow:  '#9e824c'
+#  #  blue:    '#556a7d'
+#  #  magenta: '#75617b'
+#  #  cyan:    '#5b7d78'
+#  #  white:   '#828482'
+#
+#  # Indexed Colors
+#  #
+#  # The indexed colors include all colors from 16 to 256.
+#  # When these are not set, they're filled with sensible defaults.
+#  #
+#  # Example:
+#  #   `- { index: 16, color: '#ff00ff' }`
+#  #
+#  #indexed_colors: []
 
 # Bell
 #
