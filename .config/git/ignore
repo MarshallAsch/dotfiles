@@ -1,1 +1,7 @@
 .*.swp
+.vscode
+.idea
+
+
+# python venv
+venv

@@ -20,7 +20,7 @@ set showmode
 set showcmd
 set nowrap
 set linebreak
-"set colorcolumn=81
+set colorcolumn=120
 " set cursorline
 set number
 set relativenumber
@@ -61,6 +61,9 @@ Plug 'mhinz/vim-signify'                    " VCS gutter
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 " }}}
 
@@ -75,6 +78,16 @@ set updatetime=100
 " vim-colorscheme
 " colorscheme zenburn
 " colorscheme Revolution
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
 
+set background=dark    " Setting dark mode
+let g:gruvbox_italic = '1'
+
+autocmd vimenter * ++nested colorscheme gruvbox
+
+
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#themes#gruvbox#palette = {}
 

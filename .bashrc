@@ -26,7 +26,8 @@ export PATH="$PATH:$SPICETIFY_INSTALL:"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export EDITOR=vim
-
+export HISTSIZE=5000
+export HISTTIMEFORMAT="%d/%m/%y %T "
 
 #export PS1="\[\033[1m\]\u\[\033[0m\]@\[\033[1;36m\]\h\[\033[0m\] \[\033[1;32m\]\W$\[\033[0m\] " 
 #export PROMPT_COMMAND="pwd > /tmp/whereami"
@@ -59,3 +60,24 @@ function prompt_command {
 
 export PROMPT_COMMAND=prompt_command
 export PS1="${WHITE}\u${RESTORE}@${CYAN}\h ${GREEN}\W${YELLOW}\$GIT_STATUS${GREEN}\$ ${RESTORE}"
+export PS2="${YELLOW}^_^ ${RESTORE}"
+
+complete -C /usr/bin/terraform terraform
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+
+#XDG_DATA_HOME=
+#XDG_CACHE_HOME=
+
+# make some applictions useXDG dirs that are not XDG complient
+#export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+#export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
+#export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+#export NVM_DIR="$XDG_DATA_HOME"/nvm
+#
+#nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings

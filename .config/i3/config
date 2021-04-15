@@ -25,8 +25,10 @@ set $mon_2 DP-2
 # uses xrandr to set araingment
 exec --no-startup-id xrandr --output DP-2 --rate 120.00 --mode 3440x1440 --primary --pos 1920x0 --output HDMI-1 --pos 0x360 --mode 1920x1080 --rate 60.00
 
-#  automaticly lock the screen after inactivity
+# setup webcam quality
+exec --no-startup-id v4l2-ctl --set-fmt-video width=1920,height=1080,pixelformat=MJPG
 
+#  automaticly lock the screen after inactivity
 set $lock_time_min 5
 set $screen_off_time_s 360
 
@@ -82,7 +84,7 @@ exec --no-startup-id nitrogen --restore
 
  
 # set opacity of the inactive windows
-exec --no-startup-id compton -i 0.91
+#exec --no-startup-id compton -i 0.91
 
 
 # Dont have the focous follow the mouse
@@ -103,7 +105,8 @@ bindsym $mod+Shift+Print exec --no-startup-id maim -s -u -m 1  $screenshotDir/sc
 
 # start pulseaudio
 
-exec --no-startup-id pulseaudio --start
+#exec --no-startup-id pulseaudio --start
+exec --no-startup-id nextcloud
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -292,6 +295,9 @@ mode $open_mode {
 
 	bindsym f exec firefox --new-window ; mode "default"
 	bindsym s exec spotify & ; mode "default"
+    bindsym d exec discord & ; mode "default"
+    bindsym v exec code -n ; mode "default"
+
 	# return to normal: Enter or Escape
 	bindsym Escape mode "default"
 	bindsym Return mode "default"

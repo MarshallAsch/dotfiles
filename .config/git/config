@@ -8,3 +8,5 @@
 	graph = log --graph --oneline --all --decorate
 [pull]
 	ff = only
+[init]
+	defaultBranch = main

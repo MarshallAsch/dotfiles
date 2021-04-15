@@ -21,3 +21,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/.dotfiles/ --work-tree=$H
 # view all the ports that are connected
 alias ports="sudo netstat -tulpn"
 
+alias ssh_agent='eval "$(ssh-agent -s)"'
+
+
+alias venv="source venv/bin/activate"
