@@ -22,9 +22,13 @@ export PATH
 
 # User specific aliases and functions
 export SPICETIFY_INSTALL="/opt/spicetify-cli"
-export PATH="$PATH:$SPICETIFY_INSTALL:"
+export PATH="$PATH:$SPICETIFY_INSTALL"
 export PATH="$HOME/.cargo/bin:$PATH"
+#export PATH="$PATH:/opt/cmdline-tools/bin"
 
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_SDK_HOME=$ANDROID_SDK_ROOT
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools"
 export EDITOR=vim
 export HISTSIZE=5000
 export HISTTIMEFORMAT="%d/%m/%y %T "

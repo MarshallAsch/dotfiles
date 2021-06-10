@@ -288,7 +288,7 @@ bindsym $mod+r mode "resize"
 
 
 
-set $open_mode "Open: [f]irefox [s]potify"
+set $open_mode "Open: [f]irefox [s]potify [v]scode [d]iscord [m]signal"
 bindsym $mod+o mode $open_mode
 
 mode $open_mode {
@@ -297,6 +297,7 @@ mode $open_mode {
 	bindsym s exec spotify & ; mode "default"
     bindsym d exec discord & ; mode "default"
     bindsym v exec code -n ; mode "default"
+    bindsym m exec signal-desktop ; mode "default" 
 
 	# return to normal: Enter or Escape
 	bindsym Escape mode "default"

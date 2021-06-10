@@ -25,3 +25,6 @@ alias ssh_agent='eval "$(ssh-agent -s)"'
 
 
 alias venv="source venv/bin/activate"
+alias minecraft="/opt/MultiMC/MultiMC"
+alias liquidctl_normal="liquidctl -m pro set sync speed 40 && liquidctl -m H100i set fan speed 20 20 40 70 50 100"
+alias liquidctl_max="liquidctl -m pro set sync speed 100 && liquidctl -m H100i set fan speed 100"
