@@ -11,7 +11,7 @@ alias ll="ls -l --color -h"
 
 
 
-alias gh="history | grep "
+alias hgrep="history | grep "
 
 alias xclip="xclip -sel clip"
 
@@ -20,6 +20,9 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/.dotfiles/ --work-tree=$H
 
 # view all the ports that are connected
 alias ports="sudo netstat -tulpn"
+
+alias drives="sudo fdisk -l | sed -e '/Disk \/dev\/loop/,+5d'"
+alias space="df -h -T -x squashfs"
 
 alias ssh_agent='eval "$(ssh-agent -s)"'
 
