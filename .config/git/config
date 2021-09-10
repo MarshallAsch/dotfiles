@@ -6,6 +6,7 @@
 	autocrlf = input
 [alias]
 	graph = log --graph --oneline --all --decorate
+    hash = rev-parse --short HEAD
 [pull]
 	ff = only
 [init]
