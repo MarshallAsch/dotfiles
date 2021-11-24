@@ -1,4 +1,3 @@
-# .bashrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -8,6 +7,11 @@ fi
 # Source aliases definitions
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
+fi
+
+# Source function definitions
+if [ -f ~/.bash_functions ]; then
+	. ~/.bash_functions
 fi
 
 # User specific environment
@@ -66,7 +70,7 @@ export PROMPT_COMMAND=prompt_command
 export PS1="${WHITE}\u${RESTORE}@${CYAN}\h ${GREEN}\W${YELLOW}\$GIT_STATUS${GREEN}\$ ${RESTORE}"
 export PS2="${YELLOW}^_^ ${RESTORE}"
 
-complete -C /usr/bin/terraform terraform
+#complete -C /usr/bin/terraform terraform
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
