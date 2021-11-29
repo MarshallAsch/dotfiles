@@ -1,13 +1,14 @@
 [user]
-	name = Marshall Asch
-	email = maasch@rogers.com
+    name = Marshall Asch
+    email = maasch@rogers.com
 [core]
-	editor = vim
-	autocrlf = input
+    editor = vim
+    autocrlf = input
 [alias]
-	graph = log --graph --oneline --all --decorate
+    graph = log --graph --oneline --all --decorate
     hash = rev-parse --short HEAD
+    count = rev-list --count HEAD
 [pull]
-	ff = only
+    ff = only
 [init]
-	defaultBranch = main
+    defaultBranch = main
