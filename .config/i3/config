@@ -18,12 +18,12 @@ set $inner_gaps 8
 set $outer_gaps 0
 
 
-set $mon_1 HDMI-1
+set $mon_1 HDMI-0
 set $mon_2 DP-2
 
 ####### SET UP DISPLAYS
 # uses xrandr to set araingment
-exec --no-startup-id xrandr --output DP-2 --rate 120.00 --mode 3440x1440 --primary --pos 1920x0 --output HDMI-1 --pos 0x360 --mode 1920x1080 --rate 60.00
+exec --no-startup-id xrandr --output DP-2 --rate 120.00 --mode 3440x1440 --primary --pos 1920x0 --output HDMI-0 --pos 0x360 --mode 1920x1080 --rate 60.00
 
 # setup webcam quality
 exec --no-startup-id v4l2-ctl --set-fmt-video width=1920,height=1080,pixelformat=MJPG
