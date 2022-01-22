@@ -329,6 +329,19 @@ mode $lock_mode {
 	bindsym Return mode "default"
 }
 
+set $led_mode "Set LED: [o]n of[f] [r]ainbow"
+bindsym $mod+F12 mode $led_mode
+
+mode $led_mode {
+
+	bindsym o exec ~/Documents/code/monitorLight/configure.py --config ~/Documents/code/monitorLight/settings.yml on ; mode "default"
+	bindsym f exec ~/Documents/code/monitorLight/configure.py --config ~/Documents/code/monitorLight/settings.yml off ; mode "default"
+    bindsym r exec ~/Documents/code/monitorLight/configure.py --config ~/Documents/code/monitorLight/settings.yml on --effect rainbow ; mode "default"
+
+	# return to normal: Enter or Escape
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+}
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
