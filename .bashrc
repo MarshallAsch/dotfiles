@@ -89,3 +89,7 @@ export NVM_DIR="$HOME/.nvm"
 #export NVM_DIR="$XDG_DATA_HOME"/nvm
 #
 #nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings
+
+# >>>> Vagrant command completion (start)
+. /opt/vagrant/embedded/gems/2.2.19/gems/vagrant-2.2.19/contrib/bash/completion.sh
+# <<<<  Vagrant command completion (end)
