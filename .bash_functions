@@ -8,3 +8,11 @@ function validateYaml() {
         echo "invalid";
     fi; 
 }
+
+
+function jwt-decode() {
+
+    sed 's/\./\n/g' <<< $(cut -d. -f1,2 <<< $1) | base64 -d
+
+}
+
