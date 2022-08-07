@@ -1,6 +1,12 @@
 [user]
     name = Marshall Asch
     email = maasch@rogers.com
+    
+# include plex config After personal config
+# This will allow the email to be overridden
+[includeIf "gitdir:plex/"]
+    path = config-plex
+
 [core]
     editor = vim
     autocrlf = input
@@ -12,3 +18,7 @@
     ff = only
 [init]
     defaultBranch = main
+[commit]
+    gpgsign = true
+[push]
+	autoSetupRemote = true
